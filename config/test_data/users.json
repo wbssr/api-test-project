@@ -1,0 +1,15 @@
+{
+  "valid_user": {
+    "email": "test_user@example.com",
+    "password": "123456",
+    "name": "测试用户"
+  },
+  "invalid_registrations": [
+    {
+      "email": "short_pwd@example.com",
+      "password": "123",
+      "name": "短密码用户",
+      "expected_detail": "密码长度至少 6 位"
+    }
+  ]
+}

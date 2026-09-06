@@ -1,0 +1,14 @@
+{
+  "valid_products": [
+    {"name": "测试商品A", "price": 99.9, "stock": 10},
+    {"name": "测试商品B", "price": 50, "stock": 20},
+    {"name": "测试商品C", "price": 199, "stock": 5}
+  ],
+  "invalid_prices": [
+    {"name": "零元商品", "price": 0, "stock": 10},
+    {"name": "负价商品", "price": -10, "stock": 10}
+  ],
+  "invalid_stocks": [
+    {"name": "负库存商品", "price": 50, "stock": -5}
+  ]
+}
