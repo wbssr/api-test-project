@@ -97,7 +97,12 @@ allure serve reports/allure-results
 - 接口关联：覆盖 登录→创建→加购→下单→取消 完整链路
 
 - 日志：每个请求路径和状态码都被记录
+### CI/CD
 
+项目配置了 GitHub Actions，代码提交后自动运行测试。
+- 自动安装依赖
+- 启动 FastAPI 服务
+- 执行 pytest 全部用例
 ### 缺陷发现记录
 在补充异常用例时，发现 GET /products 接口未做认证，已通过测试覆盖该场景并确认修复方案。
 
