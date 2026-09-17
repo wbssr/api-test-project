@@ -1,5 +1,4 @@
-一键复制 README.md
-markdown
+![API Tests](https://github.com/wbssr/api-test-project/actions/workflows/test.yml/badge.svg)
 # 电商系统接口自动化测试框架
 
 ## 项目简介
