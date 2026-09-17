@@ -40,4 +40,19 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests/ -v
+        pip install allure-pytest
+        pytest tests/ -v --alluredir=allure-results
+
+    - name: Generate Allure Report
+      if: always()
+      uses: simple-elf/allure-report-action@master
+      with:
+        allure_results: allure-results
+        allure_report: allure-report
+
+    - name: Upload Allure Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: allure-report/
