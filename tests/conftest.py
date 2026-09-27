@@ -29,9 +29,9 @@ def registered_user(api, clean_db):
     """注册并登录一个测试用户，返回用户信息"""
     clean_db()  # 先清空
 
-    email = "test_user@example.com"
-    password = "123456"
-    name = "测试用户"
+    email = settings.TEST_USER_EMAIL
+    password = settings.TEST_USER_PASSWORD
+    name = settings.TEST_USER_NAME
 
     # 注册
     resp = api.post("/register", json={

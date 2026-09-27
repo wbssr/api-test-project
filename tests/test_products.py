@@ -1,14 +1,10 @@
 import pytest
-from utils.logger import logger
 from jsonschema import validate
 from utils.schemas import product_schema
-from utils.data_loader import load_json
-import os
+from utils.data_loader import get_test_data
 
 # 加载商品测试数据
-PRODUCTS_DATA = load_json(
-    os.path.join("config", "test_data", "products.json")
-)
+PRODUCTS_DATA = get_test_data("products.json")
 class TestProducts:
 
     # ========== 创建商品 ==========

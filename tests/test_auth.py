@@ -1,9 +1,7 @@
 import pytest
-from utils.logger import logger
-from utils.data_loader import load_json
-import os
+from utils.data_loader import get_test_data
+USERS_DATA = get_test_data("users.json")
 
-USERS_DATA = load_json(os.path.join("config", "test_data", "users.json"))
 class TestAuth:
     @pytest.mark.smoke
     def test_register_success(self, api, clean_db):
